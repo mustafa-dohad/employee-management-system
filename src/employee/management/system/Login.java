@@ -34,10 +34,26 @@ public class Login extends JFrame {
         login.setForeground(Color.white);
         add(login);
         back = new JButton("BACK");
-        back.setBounds(300,140,150,30);
+        back.setBounds(150,180,150,30);
         back.setBackground(Color.black);
         back.setForeground(Color.white);
         add(back);
+
+        ImageIcon i11=new ImageIcon(ClassLoader.getSystemResource("icons/second.jpg"));
+        Image i22=i11.getImage().getScaledInstance(600,400,Image.SCALE_DEFAULT);
+        ImageIcon i33=new ImageIcon(i22);
+        JLabel imgg = new JLabel(i33);
+        imgg.setBounds(350,10,600,400);
+        add(imgg);
+
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/LoginB.jpg"));
+        Image i2=i1.getImage().getScaledInstance(600,300,Image.SCALE_DEFAULT);
+        ImageIcon i3=new ImageIcon(i2);
+        JLabel img = new JLabel(i3);
+        img.setBounds(0,0,600,300);
+        add(img);
+
+
 
         setSize(600, 300);
         setLocation(450,200);
