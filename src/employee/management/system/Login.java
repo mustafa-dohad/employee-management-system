@@ -1,7 +1,10 @@
 package employee.management.system;
 import javax.swing.*;
 import java.awt.*;
-public class Login extends JFrame {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Login extends JFrame implements ActionListener {
     JTextField tusername;
     JPasswordField tpassword;
 
@@ -30,13 +33,17 @@ public class Login extends JFrame {
 
         login = new JButton("LOGIN");
         login.setBounds(150,140,150,30);
-        login.setBackground(Color.black);
-        login.setForeground(Color.white);
+        login.setBackground(Color.gray);
+        login.setForeground(Color.black);
+        login.addActionListener(this);
         add(login);
+
+
         back = new JButton("BACK");
         back.setBounds(150,180,150,30);
-        back.setBackground(Color.black);
-        back.setForeground(Color.white);
+        back.setBackground(Color.gray);
+        back.setForeground(Color.black);
+        back.addActionListener(this);
         add(back);
 
         ImageIcon i11=new ImageIcon(ClassLoader.getSystemResource("icons/second.jpg"));
@@ -61,15 +68,18 @@ public class Login extends JFrame {
 
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==login){
 
+        }
+        else if (e.getSource()==back) {
+            System.exit(0);
+        }
+    }
 
-
-
-
-
-
-
-    public static void main(String[] args) {        try {
+    public static void main(String[] args) {        
+        try {
         for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
             if ("Nimbus".equals(info.getName())) {
                 UIManager.setLookAndFeel(info.getClassName());
