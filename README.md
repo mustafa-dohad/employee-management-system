@@ -4,7 +4,8 @@ This project is a Java Swing GUI application developed using Maven and MySQL Wor
 
 ## Demo Video
 
-Watch the demo of the project on YouTube: [Employee Management System Demo](https://youtu.be/pXMzkRGpKy0?si=oWgNlaPrKuesuZCX)
+Watch the demo of the project on YouTube:
+[Employee Management System Demo](https://youtu.be/pXMzkRGpKy0?si=oWgNlaPrKuesuZCX)
 
 ## Prerequisites
 
