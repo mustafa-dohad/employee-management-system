@@ -10,57 +10,47 @@ public class Login extends JFrame implements ActionListener {
     JTextField tusername;
     JPasswordField tpassword;
 
-    JButton login, back;
+    JButton login;
 
     Login() {
         setLayout(null);
 
-        JLabel username = new JLabel("Username");
-        username.setBounds(40, 20, 100, 30);
-        add(username);
+        JLabel tuname = new JLabel("username: cs123456");
+        tuname.setBounds(250,450,250,30);
+        tuname.setFont(new Font("SAN_SERIF", Font.BOLD, 15));
+        tuname.setForeground(Color.white);
+        add(tuname);
+        JLabel tpass = new JLabel("password: 123456789");
+        tpass.setBounds(250,480,250,30);
+        tpass.setFont(new Font("SAN_SERIF", Font.BOLD, 15));
+        tpass.setForeground(Color.white);
+        add(tpass);
+
 
         tusername = new JTextField();
-        tusername.setBounds(150, 20, 150, 30);
+        tusername.setBounds(600, 283, 174, 45);
         add(tusername);
 
-        JLabel password = new JLabel("Password");
-        password.setBounds(40, 70, 100, 30);
-        add(password);
-
         tpassword = new JPasswordField();
-        tpassword.setBounds(150, 70, 150, 30);
+        tpassword.setBounds(600, 325, 174, 45);
         add(tpassword);
 
         login = new JButton("LOGIN");
-        login.setBounds(150, 140, 150, 30);
-        login.setBackground(Color.gray);
-        login.setForeground(Color.black);
+        login.setBounds(556, 410, 220, 48);
+        login.setBackground(new Color(97,21,21));
+        login.setForeground(Color.white);
         login.addActionListener(this);
         add(login);
 
-        back = new JButton("BACK");
-        back.setBounds(150, 180, 150, 30);
-        back.setBackground(Color.gray);
-        back.setForeground(Color.black);
-        back.addActionListener(this);
-        add(back);
-
-        ImageIcon i11 = new ImageIcon(ClassLoader.getSystemResource("icons/second.jpg"));
-        Image i22 = i11.getImage().getScaledInstance(600, 400, Image.SCALE_DEFAULT);
-        ImageIcon i33 = new ImageIcon(i22);
-        JLabel imgg = new JLabel(i33);
-        imgg.setBounds(350, 10, 600, 400);
-        add(imgg);
-
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/LoginB.jpg"));
-        Image i2 = i1.getImage().getScaledInstance(600, 300, Image.SCALE_DEFAULT);
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/Login.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1000, 650, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel img = new JLabel(i3);
-        img.setBounds(0, 0, 600, 300);
+        img.setBounds(0, 0, 1000, 650);
         add(img);
 
-        setSize(600, 300);
-        setLocation(450, 200);
+        setSize(1000, 650);
+        setLocation(350, 150);
         setVisible(true);
     }
 
@@ -85,8 +75,6 @@ public class Login extends JFrame implements ActionListener {
             } catch (Exception E) {
                 E.printStackTrace();
             }
-        } else if (e.getSource() == back) {
-            System.exit(0);
         }
     }
 

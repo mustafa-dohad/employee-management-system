@@ -12,7 +12,7 @@ public class conn {
         try {
             // Corrected the driver class name
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeemanagement", "root", "123456789");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeemanagement", "root", "Smd2002@");
             statement = connection.createStatement();
         } catch (Exception e) {
             e.printStackTrace();

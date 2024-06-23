@@ -22,7 +22,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
     AddEmployee(){
 
-        getContentPane().setBackground(new Color(163, 255, 188));
+        getContentPane().setBackground(new Color(255, 255, 255));
 
         JLabel heading = new JLabel("Add Employee Details");
         heading.setBounds(320,30,500,50);
@@ -36,17 +36,17 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         tname= new JTextField();
         tname.setBounds(200,150,150,30);
-        tname.setBackground(new Color(177,252,197));
+        tname.setBackground(new Color(173,216,230));
         add(tname);
 
-        JLabel fname = new JLabel("Father's Name");
+        JLabel fname = new JLabel("Last Name");
         fname.setBounds(400,150,150,30);
         fname.setFont(new Font("SAN_SERIF", Font.BOLD, 20));
         add(fname);
 
         tfname= new JTextField();
         tfname.setBounds(600,150,150,30);
-        tfname.setBackground(new Color(177,252,197));
+        tfname.setBackground(new Color(173,216,230));
         add(tfname);
 
         JLabel dob = new JLabel("Date of Birth");
@@ -56,7 +56,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         tdob= new JDateChooser();
         tdob.setBounds(200,200,150,30);
-        tdob.setBackground(new Color(177,252,197));
+        tdob.setBackground(new Color(173,216,230));
         add(tdob);
 
         JLabel salary = new JLabel("Salary");
@@ -66,7 +66,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         tslary= new JTextField();
         tslary.setBounds(600,200,150,30);
-        tslary.setBackground(new Color(177,252,197));
+        tslary.setBackground(new Color(173,216,230));
         add(tslary);
 
         JLabel address = new JLabel("Address");
@@ -76,7 +76,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         taddress= new JTextField();
         taddress.setBounds(200,250,150,30);
-        taddress.setBackground(new Color(177,252,197));
+        taddress.setBackground(new Color(173,216,230));
         add(taddress);
 
         JLabel phone = new JLabel("Phone");
@@ -86,7 +86,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         tphone= new JTextField();
         tphone.setBounds(600,250,150,30);
-        tphone.setBackground(new Color(177,252,197));
+        tphone.setBackground(new Color(173,216,230));
         add(tphone);
 
         JLabel email = new JLabel("Email");
@@ -96,7 +96,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         temail= new JTextField();
         temail.setBounds(200,300,150,30);
-        temail.setBackground(new Color(177,252,197));
+        temail.setBackground(new Color(173,216,230));
         add(temail);
 
         JLabel education = new JLabel("Education");
@@ -107,7 +107,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         String items[] = {"ACCA", "BBA", "BCA", "B.COM", "BSCS","BSDS", "BSSE", "MA", "MBA", "M.TECH", "MSC", "PHD"};
         Boxeducation = new JComboBox(items);
         Boxeducation.setBounds(600,300,150,30);
-        Boxeducation.setBackground(new Color(177,252,197));
+        Boxeducation.setBackground(new Color(173,216,230));
         add(Boxeducation);
 
         JLabel cnic = new JLabel("CNIC");
@@ -117,7 +117,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         tcnic= new JTextField();
         tcnic.setBounds(200,350,150,30);
-        tcnic.setBackground(new Color(177,252,197));
+        tcnic.setBackground(new Color(173,216,230));
         add(tcnic);
 
         JLabel designation = new JLabel("Designation");
@@ -127,7 +127,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         tdesignation= new JTextField();
         tdesignation.setBounds(600,350,150,30);
-        tdesignation.setBackground(new Color(177,252,197));
+        tdesignation.setBackground(new Color(173,216,230));
         add(tdesignation);
 
 
@@ -143,20 +143,20 @@ public class AddEmployee extends JFrame implements ActionListener {
         add(tempid);
 
         add = new JButton("ADD");
-        add.setBounds(450, 550,150,40);
+        add.setBounds(450, 500,150,40);
         add.setBackground(Color.BLUE);
         add.setForeground(Color.WHITE);
         add.addActionListener(this);
         add(add);
 
         back = new JButton("BACK");
-        back.setBounds(250, 550,150,40);
+        back.setBounds(250, 500,150,40);
         back.setBackground(Color.BLUE);
         back.setForeground(Color.WHITE);
         back.addActionListener(this);
         add(back);
 
-        setSize(900,700);
+        setSize(850,600);
         setLayout(null);
         setLocation(400, 150);
         setVisible(true);
@@ -175,22 +175,20 @@ public class AddEmployee extends JFrame implements ActionListener {
             String salary = tslary.getText();
             String education = (String) Boxeducation.getSelectedItem();
             String designation = tdesignation.getText();
-            String empID = tdesignation.getText();
+            String empID = tempid.getText();
 
             try{
                 conn c = new conn();
-                String query = "insert into employee values('"+name+"', '"+fname+"', '"+dob+"',  '"+phone+"', '"+email+"', '"+address+"', '"+cnic+"', '"+education+"' , '"+salary+"' , '"+designation+"', '"+empID+"')";
+                String query = "insert into employee values('"+name+"', '"+fname+"', '"+dob+"',  '"+phone+"', '"+email+"', '"+address+"', '"+cnic+"', '"+salary+"' , '"+education+"' , '"+designation+"', '"+empID+"')";
                 c.statement.executeUpdate(query);
                 JOptionPane.showMessageDialog(null, "Employee Added Successfully");
                 setVisible(false);
-                new Main_class();
             }catch (Exception E){
                 E.printStackTrace();
             }
         }
         else {
             setVisible(false);
-            new Main_class();
         }
     }
     public static void main(String[] args) {
