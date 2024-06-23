@@ -29,7 +29,7 @@ INSERT INTO employee (name, fname, dob, phone, email, address, cnic, salary, edu
 ('Bilal', 'Farooq', '1989-12-10', '03003456789', 'bilal.farooq@example.com', 'Quetta', '4305345678901', '77000', 'BSSE', 'System Analyst', '789012'),
 ('Zainab', 'Sohail', '1991-09-25', '03006543210', 'zainab.sohail@example.com', 'Peshawar', '4306654321098', '88000', 'PHD', 'Research Scientist', '890123'),
 ('Kamran', 'Yasir', '1987-06-14', '03007654321', 'kamran.yasir@example.com', 'Gujranwala', '4307765432109', '81000', 'MSC', 'Data Analyst', '901234'),
-('Rabia', 'Shahid', '1994-02-21', '03008765432', 'rabia.shahid@example.com', 'Sialkot', '4308876543210', '93000', 'ACCA', 'Financial Analyst', '012345');
+('Rabia', 'Shahid', '1994-02-21', '03008765432', 'rabia.shahid@example.com', 'Sialkot', '4308876543210', '93000', 'ACCA', 'Financial Analyst', '012345'),
 ('Asim', 'Akram', '1986-04-11', '03004561234', 'asim.akram@example.com', 'Hyderabad', '4304561234567', '72000', 'BCA', 'Network Engineer', '112233'),
 ('Nida', 'Javed', '1990-12-05', '03007891234', 'nida.javed@example.com', 'Sukkur', '4307891234567', '67000', 'MBA', 'Operations Manager', '223344'),
 ('Rehan', 'Hussain', '1989-07-23', '03005678912', 'rehan.hussain@example.com', 'Abbottabad', '4305678912345', '81000', 'BSDS', 'Data Scientist', '334455'),
